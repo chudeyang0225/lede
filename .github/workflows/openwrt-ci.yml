@@ -68,6 +68,7 @@ jobs:
           git clone https://github.com/noddos/noddos.git
           git clone https://github.com/vernesong/OpenClash.git
           git clone https://github.com/rosywrt/luci-theme-rosy
+          git clone https://github.com/fw876/helloworld.git
 
       - name: Generate configuration file
         run: |
@@ -187,12 +188,16 @@ jobs:
           # CONFIG_PACKAGE_luci-app-shairplay=y
           CONFIG_PACKAGE_UnblockNeteaseMusic=y
           CONFIG_PACKAGE_UnblockNeteaseMusicGo=y
+          CONFIG_PACKAGE_helloworld=y
+          CONFIG_PACKAGE_noddos=y
+          CONFIG_PACKAGE_OpenClash=y
           EOF
 
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
           CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-rosy=y
           EOF
 
           # 常用软件包:
